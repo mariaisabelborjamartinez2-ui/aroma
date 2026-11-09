@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Aroma & Grano, cafetería de especialidad en Canalete, Córdoba. Disfruta nuestros cafés, desayunos y panadería.">
+  <meta name="theme-color" content="#43291f">
+  <title>Aroma & Grano | Cafetería de Especialidad</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="header">
+  <a href="#inicio" class="logo">☕ Aroma <span>& Grano</span></a>
+  <button class="menu-toggle" id="menuToggle">☰</button>
+  <nav id="navigation">
+    <a href="#inicio">Inicio</a>
+    <a href="#historia">Nosotros</a>
+    <a href="#carta">Nuestra carta</a>
+    <a href="#reservas">Reservas</a>
+    <a href="#contacto">Contacto</a>
+  </nav>
+</header>
+
+<section class="hero" id="inicio">
+  <div class="hero-content">
+    <p class="eyebrow">CAFÉ DE ESPECIALIDAD</p>
+    <h1>Un buen café,<br>momentos inolvidables.</h1>
+    <p>Descubre el sabor, aroma y la magia de compartir una buena taza de café.</p>
+    <a href="#reservas" class="btn">Reserva tu mesa</a>
+  </div>
+</section>
+
+<section class="status-section">
+  <div class="status-card">
+    <span>Estado de nuestra cafetería:</span>
+    <strong id="openingStatus">Consultando horario...</strong>
+    <p id="openingHours">Lunes a sábado: 7:00 a. m. - 8:00 p. m.</p>
+  </div>
+</section>
+
+<section class="history section" id="historia">
+  <div class="history-image"></div>
+  <div>
+    <p class="eyebrow">NUESTRA HISTORIA</p>
+    <h2>Más que café, una experiencia.</h2>
+    <p>
+      Aroma & Grano nació del amor por el café y los pequeños momentos
+      que hacen especial cada día. Queremos ofrecer un espacio acogedor
+      donde cada visitante disfrute bebidas deliciosas, productos frescos
+      y una atención especial.
+    </p>
+    <p>
+      Cada taza está preparada con dedicación, pasión y el auténtico
+      sabor de un buen café.
+    </p>
+    <a href="#carta" class="btn btn-dark">Conoce nuestra carta</a>
+  </div>
+</section>
+
+<section class="menu-section section" id="carta">
+  <div class="section-heading">
+    <p class="eyebrow">SABORES QUE ENAMORAN</p>
+    <h2>Nuestra carta</h2>
+    <p>Encuentra tu favorito y disfruta cada momento.</p>
+  </div>
+
+  <div class="tabs">
+    <button class="tab active" data-category="cafes">Cafés</button>
+    <button class="tab" data-category="frias">Bebidas frías</button>
+    <button class="tab" data-category="panaderia">Panadería</button>
+    <button class="tab" data-category="desayunos">Desayunos</button>
+  </div>
+
+  <div class="menu-grid" id="menuGrid"></div>
+</section>
+
+<section class="reservation section" id="reservas">
+  <div class="section-heading">
+    <p class="eyebrow">TE ESPERAMOS</p>
+    <h2>Reserva tu mesa</h2>
+    <p>Completa tus datos y disfruta una experiencia especial.</p>
+  </div>
+
+  <form id="reservationForm">
+    <div class="form-grid">
+      <div>
+        <label for="name">Nombre completo</label>
+        <input type="text" id="name" placeholder="Tu nombre" required>
+      </div>
+
+      <div>
+        <label for="email">Correo electrónico</label>
+        <input type="email" id="email" placeholder="correo@ejemplo.com" required>
+      </div>
+
+      <div>
+        <label for="date">Fecha de reserva</label>
+        <input type="date" id="date" required>
+      </div>
+
+      <div>
+        <label for="time">Hora de reserva</label>
+        <input type="time" id="time" min="07:00" max="19:30" required>
+      </div>
+
+      <div class="full-width">
+        <label for="people">Número de personas (1 a 10)</label>
+        <input type="number" id="people" min="1" max="10" value="2" required>
+      </div>
+    </div>
+
+    <button type="submit" class="btn submit-btn">Confirmar reserva</button>
+  </form>
+
+  <div id="reservationResult" class="reservation-result" aria-live="polite"></div>
+</section>
+
+<section class="contact section" id="contacto">
+  <div class="section-heading">
+    <p class="eyebrow">VISÍTANOS</p>
+    <h2>Estamos para atenderte</h2>
+  </div>
+
+  <div class="contact-grid">
+    <div class="contact-card">
+      <span>📍</span>
+      <h3>Ubicación</h3>
+      <p>Canalete, Córdoba, Colombia.</p>
+    </div>
+
+    <div class="contact-card">
+      <span>📞</span>
+      <h3>WhatsApp</h3>
+      <p>312 602 0219</p>
+      <a href="https://wa.me/573126020219" target="_blank" rel="noopener" class="text-link">Escríbenos</a>
+    </div>
+
+    <div class="contact-card">
+      <span>🕒</span>
+      <h3>Horario</h3>
+      <p>Lunes a sábado</p>
+      <p>7:00 a. m. - 8:00 p. m.</p>
+      <p>Domingos: cerrado</p>
+    </div>
+  </div>
+
+  <a href="https://wa.me/573126020219?text=Hola%2C%20quiero%20informaci%C3%B3n%20sobre%20Aroma%20%26%20Grano" target="_blank" rel="noopener" class="btn whatsapp-btn">
+    WhatsApp - Contáctanos
+  </a>
+</section>
+
+<footer>
+  <h2>☕ Aroma & Grano</h2>
+  <p>El aroma que inspira, el sabor que enamora.</p>
+  <p>Canalete, Córdoba, Colombia.</p>
+  <p>© 2026 Aroma & Grano. Todos los derechos reservados.</p>
+</footer>
+
+<a href="https://wa.me/573126020219" class="floating-whatsapp" target="_blank" rel="noopener" aria-label="Contactar por WhatsApp">✆</a>
+
+<script src="script.js"></script>
+</body>
+</html>
